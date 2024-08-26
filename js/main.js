@@ -95,50 +95,6 @@ function submitForm(e, form) {
   const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-// const raw = JSON.stringify({
-//       scr: getParameterByName('scr'),
-//       staffName: form.service.value,
-//       tableNumber: form.table.value,
-//       lang: isEnLang ? 'en' : 'vi',
-//       comment,
-//       contact,
-//       date: Date()
-//     })
-// const requestOptions = {
-//   method: "POST",
-//   headers: myHeaders,
-//   body: raw,
-//   redirect: "follow"
-// };
-
-// fetch("http://localhost:8080/auth/submitForm", requestOptions)
-//   .then((response) => {
-//     console.log("huytd11");
-//     console.log(response);
-//   })
-//   .then((result) => {
-//      console.log("huytd");
-//      console.log(result);
-    // if (result.code != 200) {
-    //   if (isEnLang) {
-    //               handleSubmitError({ message: 'Link is expired or invalid, please scan the QR code for the latest link.' })
-    //               return
-    //             }
-    //             handleSubmitError({ message: 'Liên kết đã hết hạn hoặc không hợp lệ, vui lòng quét lại mã QR để lấy liên kết mới nhất.' })
-    //             return
-    // } else {
-    //   btn[0].classList.remove('loading')
-    //   let pathname = window.location.pathname.split('/en')[0]
-
-    //   if (isEnLang) {
-    //     window.location.href = pathname + '/success/en'
-    //     return
-    //   }
-    //   window.location.href = pathname + 'success'
-    // }
-//   })
-//   .catch((error) => console.error(error));
-
   fetch('http://localhost:8080/auth/submitForm', {
     method: 'post',
     headers: {
@@ -168,11 +124,11 @@ myHeaders.append("Content-Type", "application/json");
       btn[0].classList.remove('loading')
       let pathname = window.location.pathname.split('/en')[0]
 
-      if (isEnLang) {
-        window.location.href = pathname + '/success/en'
-        return
-      }
-      window.location.href = "file:///Users/huytran/Desktop/form/success.html"
+      // if (isEnLang) {
+      //   window.location.href = pathname + '/success/en'
+      //   return
+      // }
+      alert("Feedback success")
     }
       })
       .catch(handleSubmitError)
