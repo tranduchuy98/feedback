@@ -95,7 +95,7 @@ function submitForm(e, form) {
   const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-  fetch('http://localhost:8080/auth/submitForm', {
+  fetch('https://learn-be-37y5.onrender.com/auth/submitForm', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -123,11 +123,7 @@ myHeaders.append("Content-Type", "application/json");
     } else {
       btn[0].classList.remove('loading')
       let pathname = window.location.pathname.split('/en')[0]
-
-      // if (isEnLang) {
-      //   window.location.href = pathname + '/success/en'
-      //   return
-      // }
+     window.location.href = pathname + '/success'
       alert("Feedback success")
     }
       })

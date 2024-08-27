@@ -333,7 +333,7 @@ h2.title {
   font-size: 50px;
   color: #fff;
   font-weight: bold;
-  background: #679933;
+  background: #d87b1f;
   padding: 8px 0; }
 
 p.sub-title {
@@ -377,7 +377,7 @@ p.sub-title {
   margin-bottom: 20px; }
 
 .btn-submit {
-  background: #679933;
+  background: #d87b1f;
   width: 140px;
   height: 40px;
   line-height: 40px;
@@ -390,7 +390,7 @@ p.sub-title {
     opacity: 0.75;
     cursor: not-allowed; }
   .btn-submit:hover {
-    background: #6cab2b; }
+    background: #d87b1f; }
 
 .thanks {
   font-size: 20px;
