@@ -123,8 +123,7 @@ myHeaders.append("Content-Type", "application/json");
     } else {
       btn[0].classList.remove('loading')
       let pathname = window.location.pathname.split('/en')[0]
-     window.location.href = pathname + '/success'
-      alert("Feedback success")
+     window.location.href = "https://tranduchuy98.github.io/feedback/success/"
     }
       })
       .catch(handleSubmitError)
