@@ -501,6 +501,102 @@ footer {
   .thanks {
     font-size: 16px; } }
 
+
+  input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #8B0000; /* Màu đỏ đậm */
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s;
+  }
+  
+  input[type="date"]:focus {
+      border-color: #FF6347; /* Màu đỏ cà chua */
+      outline: none;
+  }
+  
+  ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  li {
+      padding: 15px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+        color: #8B0000;
+  }
+  
+  li:hover {
+      background-color: #FFFAF0; /* Màu nền sáng */
+    
+  }
+
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden; /* Ẩn màn hình loading ban đầu */
+}
+.loader {
+    border: 8px solid #f3f3f3; /* Màu nền */
+    border-top: 8px solid #3498db; /* Màu của loader */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+
+#searchButton {
+  background-color: #FF6347; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#resetButton {
+  background-color: #FF6347; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#searchButton:hover {
+  background-color: #0b7dda; /* Màu nền khi di chuột qua */
+}
+
+#searchButton:active {
+  background-color: #0a6f9a; /* Màu nền khi nhấn */
+}
+
 @media screen and (min-aspect-ratio: 13 / 9) and (max-width: 850px) {
   .first-col > div {
     width: calc((100% - 20px)/2); }
