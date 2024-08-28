@@ -90,10 +90,10 @@ function submitForm(e, form) {
 
   errList[1].classList.remove('show')
 
-  btn[0].classList.add('loading')
+  btn[0].disabled = "disabled";
 
   const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+   myHeaders.append("Content-Type", "application/json");
 
   fetch('https://learn-be-37y5.onrender.com/auth/submitForm', {
     method: 'post',
@@ -132,7 +132,6 @@ myHeaders.append("Content-Type", "application/json");
 
 function handleSubmitError(err) {
   console.error(err.message)
-
   document.getElementsByClassName('btn-submit')[0].classList.remove('loading')
   document.getElementById('common-error').innerText = err.message
   document.getElementById('common-error').classList.add('show')
