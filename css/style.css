@@ -553,6 +553,7 @@ footer {
     z-index: 9999;
     visibility: hidden; /* Ẩn màn hình loading ban đầu */
 }
+
 .loader {
     border: 8px solid #f3f3f3; /* Màu nền */
     border-top: 8px solid #3498db; /* Màu của loader */
@@ -606,3 +607,27 @@ footer {
     height: 40px; }
   textarea {
     height: 150px; } }
+
+    .pdf-viewer {
+      width: 100%;
+      max-width: 100vw;  /* Đảm bảo không vượt quá chiều rộng màn hình */
+      max-height: 100vh; /* Đảm bảo không vượt quá chiều cao màn hình */
+      overflow: hidden;   /* Ẩn các thanh cuộn không cần thiết */
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+  }
+  
+  .pdf-viewer h1 {
+      text-align: center;
+      color: #333;
+      margin: 10px 0; /* Giảm khoảng cách giữa tiêu đề và iframe */
+  }
+  
+  .pdf-viewer iframe {
+      width: 100%;
+      height: calc(100vh - 60px); /* Chiều cao iframe chiếm tất cả chiều cao còn lại trừ chiều cao của tiêu đề */
+      border: none;    /* Không có border */
+      overflow: auto;  /* Bật thanh cuộn cho iframe */
+  }
