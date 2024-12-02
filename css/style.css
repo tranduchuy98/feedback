@@ -607,27 +607,45 @@ footer {
     height: 40px; }
   textarea {
     height: 150px; } }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .pdf-viewer {
-      width: 100%;
-      max-width: 100vw;  /* Đảm bảo không vượt quá chiều rộng màn hình */
-      max-height: 100vh; /* Đảm bảo không vượt quá chiều cao màn hình */
-      overflow: hidden;   /* Ẩn các thanh cuộn không cần thiết */
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-      position: relative;
-  }
-  
-  .pdf-viewer h1 {
-      text-align: center;
-      color: #333;
-      margin: 10px 0; /* Giảm khoảng cách giữa tiêu đề và iframe */
-  }
-  
-  .pdf-viewer iframe {
-      width: 100%;
-      height: calc(100vh - 60px); /* Chiều cao iframe chiếm tất cả chiều cao còn lại trừ chiều cao của tiêu đề */
-      border: none;    /* Không có border */
-      overflow: auto;  /* Bật thanh cuộn cho iframe */
-  }
+.gallery-item {
+    width: auto; /* Đặt chiều rộng tự động */
+    max-width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: auto; /* Chiều cao tự động để bảo toàn tỉ lệ */
+    max-height: 80%; /* Giới hạn chiều cao tối đa để đảm bảo không quá lớn */
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Hiệu ứng khi hover */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Zoom nhẹ khi hover */
+}
+
+.overlay {
+    display: none; /* Ẩn overlay ban đầu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+}

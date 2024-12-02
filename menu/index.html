@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +14,35 @@
   <meta name="description" content="">
   <meta property="og:title" content=""/>
   <meta property="og:description" content=""/>
+  <link rel="shortcut icon" href="images/favicon.ico?v=1" type="image/x-icon"/>
+  <link rel="alternate" href="http://gyushige.com.vn/" hreflang="x-default"/>
+  <link rel="canonical" href="http://gyushige.com.vn/"/>
   <link rel="stylesheet" href="../css/style.css?v=5">
-  <script src="../js/main.js?v=2"></script>
+  <script src="../js/success.js"></script>
 </head>
 <body>
-      <div class="pdf-viewer">
-        <iframe src="../images/menu.pdf" frameborder="0"></iframe>
+  <header class="w-full">
+    <div class="header-wrapp flex layout-col space-between content">
+      <h1 class="text-center w-full">
+        <a href="/" class="logo"></a>
+      </h1>
     </div>
+  </header>
+  <main>
+     
+    <div class="gallery">
+        <img src="../images/image1.jpg" alt="Ảnh 1" class="gallery-item">
+        <img src="../images/image2.jpg" alt="Ảnh 2" class="gallery-item">
+        <img src="../images/image3.jpg" alt="Ảnh 3" class="gallery-item">
+        <img src="../images/image4.jpg" alt="Ảnh 4" class="gallery-item">
+    </div>
+
+    <!-- Popup Zoom Image -->
+    <div id="overlay" class="overlay" onclick="closeZoom()">
+        <img id="zoomedImage" class="zoomed-image">
+    </div>
+    <script src="../js/list.js"></script>
+  </main>
+  
 </body>
-</html> 
+</html>
