@@ -621,9 +621,9 @@ footer {
 
 .gallery-item {
     width: auto; /* Đặt chiều rộng tự động */
-    max-width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    max-width: 90%; /* Chiếm toàn bộ chiều rộng màn hình */
     height: auto; /* Chiều cao tự động để bảo toàn tỉ lệ */
-    max-height: 80%; /* Giới hạn chiều cao tối đa để đảm bảo không quá lớn */
+    max-height: 100%; /* Giới hạn chiều cao tối đa để đảm bảo không quá lớn */
     margin: 10px;
     cursor: pointer;
     transition: transform 0.2s; /* Hiệu ứng khi hover */
